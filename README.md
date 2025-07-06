@@ -42,6 +42,7 @@ git checkout stefany/minha-feature-xyz
 git merge developer
 # ou, se preferir histórico linear:
 # git rebase developer
+git push origin stefany/minha-feature-xyz
 ```
 
 > ⚠️ Resolva conflitos se houver, teste novamente e faça push:
