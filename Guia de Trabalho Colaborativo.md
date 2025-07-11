@@ -6,7 +6,7 @@ Este guia descreve o fluxo de trabalho recomendado para equipes que desenvolvem 
 
 - `main`: branch principal, contém apenas código estável e pronto para produção.
 - `developer`: branch de integração, reúne todas as funcionalidades em desenvolvimento.
-- `feat/<nome-dev>-<descricao>`: branches individuais para cada nova funcionalidade ou ajuste.
+- `nome-da-ação/funcionalidade`: branches individuais para cada nova funcionalidade ou ajuste.
 
 ## ✅ Passo a Passo: Trabalhando com Branches Paralelas
 
@@ -15,17 +15,17 @@ Este guia descreve o fluxo de trabalho recomendado para equipes que desenvolvem 
 ```bash
 git checkout developer
 git pull origin developer
-git checkout -b stefany/minha-feature-xyz
+git checkout -b açaõ/minha-feature-xyz
 ```
 
-> 🔁 Substitua `stefany/minha-feature-xyz` pelo nome da sua feature branch.
+> 🔁 Substitua `ação/minha-feature-xyz` pelo nome da sua feature branch.
 
 ### 2. Faça as alterações normalmente na sua branch
 
 ```bash
 git add .
 git commit -m "feat: implementa nova funcionalidade"
-git push origin stefany/minha-feature-xyz
+git push origin ação/minha-feature-xyz
 ```
 
 ### 3. Atualize sua branch com a `developer` antes de criar um Pull Request
@@ -36,7 +36,7 @@ git checkout developer
 git pull origin developer
 
 # Volte para sua branch de feature
-git checkout stefany/minha-feature-xyz
+git checkout ação/minha-feature-xyz
 
 # Integre as atualizações da developer com sua branch stefany/minha-feature-xyz
 git merge developer
@@ -47,12 +47,12 @@ git merge developer
 > ⚠️ Resolva conflitos se houver, teste novamente e faça push:
 
 ```bash
-git push origin stefany/minha-feature-xyz
+git push origin ação/minha-feature-xyz
 ```
 
 ### 4. Abra um Pull Request para a `developer`
 
-- Crie um PR da sua branch (`stefany/minha-feature-xyz`) para a branch `developer`.
+- Crie um PR da sua branch (`ação/minha-feature-xyz`) para a branch `developer`.
 - Solicite revisão de outro membro da equipe (ex: Emerson).
 - Após aprovação, o código é mesclado na `developer`.
 
@@ -61,7 +61,7 @@ git push origin stefany/minha-feature-xyz
 ```bash
 git checkout developer
 git pull origin developer
-git checkout stefany/minha-feature-xyz
+git checkout ação/minha-feature-xyz
 git merge developer
 ```
 
@@ -73,9 +73,9 @@ Utilize nomes de branch claros e padronizados:
 
 | Prefixo     | Significado                    | Exemplo                         |
 |-------------|--------------------------------|----------------------------------|
-| `feat/`     | Nova funcionalidade            | `feat/emerson-login`            |
-| `fix/`      | Correção de bug                | `fix/stephany-menu-responsivo`  |
-| `refactor/` | Refatoração de código          | `refactor/emerson-limpar-codigo`|
+| `feat/`     | Nova funcionalidade            | `feat/fulano-login`            |
+| `fix/`      | Correção de bug                | `fix/ciclano-menu-responsivo`  |
+| `refactor/` | Refatoração de código          | `refactor/beltrano-limpar-codigo`|
 
 ## ✔️ Boas Práticas
 
