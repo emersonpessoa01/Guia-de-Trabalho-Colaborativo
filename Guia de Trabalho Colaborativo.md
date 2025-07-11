@@ -15,7 +15,7 @@ Este guia descreve o fluxo de trabalho recomendado para equipes que desenvolvem 
 ```bash
 git checkout developer
 git pull origin developer
-git checkout -b açaõ/minha-feature-xyz
+git checkout -b ação/minha-feature-xyz
 ```
 
 > 🔁 Substitua `ação/minha-feature-xyz` pelo nome da sua feature branch.
@@ -38,7 +38,7 @@ git pull origin developer
 # Volte para sua branch de feature
 git checkout ação/minha-feature-xyz
 
-# Integre as atualizações da developer com sua branch stefany/minha-feature-xyz
+# Integre as atualizações da developer com sua branch ação/minha-feature-xyz
 git merge developer
 # ou, se preferir histórico linear:
 # git rebase developer
@@ -53,7 +53,7 @@ git push origin ação/minha-feature-xyz
 ### 4. Abra um Pull Request para a `developer`
 
 - Crie um PR da sua branch (`ação/minha-feature-xyz`) para a branch `developer`.
-- Solicite revisão de outro membro da equipe (ex: Emerson).
+- Solicite revisão de outro membro da equipe.
 - Após aprovação, o código é mesclado na `developer`.
 
 ### 5. No próximo dia de trabalho, mantenha sua branch sincronizada
